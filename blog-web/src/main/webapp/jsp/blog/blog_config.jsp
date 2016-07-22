@@ -46,7 +46,7 @@
                     <form action="${pageContext.request.contextPath}/WebBlog/Update/Config" method="post">
                         <div class="form-group">
                             <label>博客名称</label><br/>
-                            <input required="required" data-error="包含非法字符" name="blogTitle" value="${result.data.blogTitle}" data-remote="${pageContext.request.contextPath}/WebUser/CheckUsername" placeholder="请填写博客名称" style="width: 100%"/><br/>
+                            <input required="required" data-error="包含非法字符" name="blogTitle" value="${result.data.blogTitle}" placeholder="请填写博客名称" style="width: 100%"/><br/>
                         </div>
                         <div class="form-group">
                             <label>博客子标题</label><br/>

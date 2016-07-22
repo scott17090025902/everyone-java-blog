@@ -67,6 +67,7 @@ public class WebUserController extends AbstractApiController {
     }
 
     @RequestMapping(value = "/ModifyPassword", method = RequestMethod.POST)
+    @CheckLogin
     public void modifyPassword(String oldPassword, String newPassword) {
         webUserService.modifyPassword(getUsername(), oldPassword, newPassword);
     }
