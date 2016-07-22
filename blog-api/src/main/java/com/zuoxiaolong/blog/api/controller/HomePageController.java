@@ -40,11 +40,11 @@ public class HomePageController extends AbstractApiController {
 
     @RequestMapping(value = "/Articles", method = RequestMethod.GET)
     public HomeArticleDTO getArticles(@RequestParam(defaultValue = "1") Integer categoryId, @RequestParam(required = false) String offset, @RequestParam(required = false) Integer size) {
-        return userArticleService.getArticles(offset, size, categoryId);
+        return userArticleService.getMainPageArticles(offset, size, categoryId);
     }
 
     @RequestMapping(value = "/TopThreeUserArticles", method = RequestMethod.GET)
-    public Map<String, UserArticle> topThreeUserArticles(Integer categoryId) {
+    public Map<String, UserArticle> topThreeUserArticles(@RequestParam(defaultValue = "1")Integer categoryId) {
         return userArticleService.getTopThreeUserArticles(categoryId);
     }
 
